@@ -3,6 +3,14 @@ let userMarker;
 let currentPos;
 const hazardKey = 'hazardReports';
 
+function checkDependencies() {
+    if (typeof L === 'undefined') {
+        alert('Failed to load the Leaflet library. Ensure you have an internet connection or host the library locally.');
+        return false;
+    }
+    return true;
+}
+
 function initMap() {
     map = L.map('map');
     map.setView([0,0], 15);
@@ -93,6 +101,7 @@ function setupUI() {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
+    if (!checkDependencies()) return;
     initMap();
     showHazards();
     setupUI();
