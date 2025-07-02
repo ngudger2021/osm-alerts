@@ -32,8 +32,9 @@ function onLocationFound(position) {
     map.setView(currentPos);
 }
 
-function onLocationError() {
-    alert('Unable to retrieve your location');
+function onLocationError(err) {
+    console.error('Location error:', err);
+    alert('Unable to retrieve your location. Make sure the page is served via HTTP/HTTPS and that location access is allowed.');
 }
 
 function loadHazards() {
