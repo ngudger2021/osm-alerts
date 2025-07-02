@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSM Hazards</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-sA+e2uHKb5pt0uE7oGtLiNfXtzeLlT23D3ttAnGx33U=" crossorigin=""/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="map"></div>
+    <button id="report-btn" aria-label="Report Hazard">+</button>
+    <div id="hazard-menu" class="hidden">
+        <button data-type="roadworks">🚧 Road Works</button>
+        <button data-type="pothole">🕳️ Pothole</button>
+        <button data-type="crash">🚗 Crash</button>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-o8ljTDMb3LY28vJA69WvGVvHFLlcpC+nRcPpX9AP1fM=" crossorigin=""></script>
+    <script src="script.js"></script>
+</body>
+</html>
